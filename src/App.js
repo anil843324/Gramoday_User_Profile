@@ -1,7 +1,9 @@
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter ,Route,Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import ProductInfo from './Pages/ProductInfo/ProductInfo';
+import Profile from './Pages/Profile/Profile';
 
 function App() {
   return (
@@ -9,8 +11,15 @@ function App() {
      <BrowserRouter>
      <Header/>
     <div className="App">
-        
-         
+
+       <Routes>
+
+           <Route path='/'  element={<Profile/>} />
+
+            <Route path='/productinfo' element={<ProductInfo/>}/>
+
+       </Routes>
+          
 
     </div>
 
