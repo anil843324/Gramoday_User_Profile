@@ -1,7 +1,71 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import Product from '../Product/Product'
 
 import "./Business.css"
 const Business = () => {
+
+    const [products, setProducts]=useState()
+  
+   
+    const url='https://api.gramoday.net:8082/v1/user/bySlug?profileSlug=mmtradingco'
+  
+     const fetchData=()=>{
+
+           axios.get(url)
+           .then((response)=> {
+
+            setProducts(response.data.products)
+           })
+           .catch((error)=>console.error(`Error : ${error}`))
+     }
+
+      
+
+       useEffect(() => {
+
+        fetchData()
+       
+     
+    }, [ ])
+
+     console.log(products)
+     
+    //   console.log("first arry")
+    //  let arr=[]
+     
+    //    if(products){
+
+    //     products.forEach((ele)=>{
+          
+    //        console.log(ele)
+    //        arr.push(ele.posts)
+
+
+    //     })
+       
+    //    }  
+    //    console.log(arr)
+
+    //     console.log(" second array")
+   
+    //     let arr2=[]
+
+    //     if(arr){
+
+    //       arr.forEach((ele)=>{
+            
+    //          console.log(ele[0])
+    //          arr2.push(ele[0])
+  
+  
+    //       })
+         
+    //      }  
+    //      console.log(arr2)
+
+
+
   return (
     <div className='business'>
 
@@ -66,49 +130,23 @@ const Business = () => {
 
       {/* product */}
 
-      <div className='product'>
 
-        <div className='product-info'>
+     
 
-          <div className='product-display'>
-            <img src="https://gramoday-images-public.s3.ap-south-1.amazonaws.com/commodity/605d761693c86f0017bfddfa" alt="product-img" />
-          </div>
+         {
+              products && products.map((ele,index)=>(
 
-          <div className='product-details'>
+                <Product  ele={ele} key={index} />
+              )
+          
+              )
 
-            <span className='product-details-name'>Potato Mandi Rates</span>
-            <span className='product-details-mandi-name'>Yeshwanthapura Mandi, Bangalore, KA</span>
-            <span className='product-details-date'> 13/06/2022</span>
-            <span className='product-details-weight'>₹ 20 - 21 / Kg </span>
-            <div className='product-date'>Updated at 6:14 PM</div>
+         }
 
-          </div>
 
-          <button className='product-see-details'>
+    
 
-            <img src="https://app.gramoday.net/static/media/seeDetailsDots.802d07fd.svg" alt="see details" />
-
-          </button>
-
-        </div>
-        <hr className='product-hr' />
-        <div className='product-button'>
-
-                {/* first button */}
-             <button className='share-button share-button-md' >
-              <img src="https://app.gramoday.net/static/media/whatsappLogo.ef512021.svg" alt="share" />
-               <span>Share</span>
-             </button>
-            {/*  second button */}
-              <button className='action-button action-button-md' type='button' style={{backgroundColor:"rgb(210,170,27)"}} >
-              <img src="	https://app.gramoday.net/static/media/interested.59b385b4.svg" alt="Interseted" />
-                  
-                   <span style={{color:"rgb(255,255,265)"}}>Interested</span>
-              </button>
-
-        </div>
-
-      </div>
+     
 
 
 

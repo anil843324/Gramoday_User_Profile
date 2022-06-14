@@ -1,4 +1,10 @@
 .business {
+   width: 50%;
+   margin: auto;
+ 
+   height: 60vh;
+   overflow-y: scroll;
+   overflow-x: hidden;
 }
 .business-details {
   display: flex;
