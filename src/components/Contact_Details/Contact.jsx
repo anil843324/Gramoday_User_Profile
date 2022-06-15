@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modaal from '../MOdal/Modaal';
+
 import "./Contact.css"
+
 const Contact = () => {
+
+
+    const [opened, setOpened] = useState(false);
+
+
+
     return (
         <div className='contact-details'>
 
             {/* profile pic */}
             <div className='contact-details-diplay-pic' >
 
-                <img src="https://app.gramoday.net/static/media/defaultUserDp.3e1b0347.svg
-" alt="profile-pic" />
+                <img src="https://app.gramoday.net/static/media/defaultUserDp.3e1b0347.svg" alt="profile-pic" />
             </div>
 
             {/* contact details info */}
@@ -26,6 +34,7 @@ const Contact = () => {
                 <div className='contact-details-buttons'>
                     <button className='action-button action-button-md'
                         style={{ backgroundColor: "rgb(1,163,157)" }}
+                        onClick={() => setOpened(!opened)}
                     >
                         <img src="https://app.gramoday.net/static/media/connect.a12a1b85.svg" alt="connect" />
                         <span style={{ color: "rgb(255,255,255)" }}>Connect</span>
@@ -33,6 +42,7 @@ const Contact = () => {
                     <button
                         className='action-button action-button-md'
                         style={{ backgroundColor: "rgb(255,255,255)", border: "1px solid rgb(1, 163, 157)" }}
+                        onClick={() => setOpened(!opened)}
                     >
                         <img src="	https://app.gramoday.net/static/media/contact.ba3c3141.svg" alt="contact" />
 
@@ -56,6 +66,7 @@ const Contact = () => {
                  </button>
             </div>
 
+            <Modaal opened={opened} setOpened={setOpened}  />
 
         </div>
     )

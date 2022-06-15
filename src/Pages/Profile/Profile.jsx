@@ -41,28 +41,31 @@ const Profile = () => {
         </button>
       </div>
        {
-        toggle ? <Business /> : <> <h1>Hello</h1> </> 
-       }
+        toggle ? <Business /> : <> 
        
-        <div style={{textAlign:"center"}} >
+        
+         </> 
+       }
+       <div style={{textAlign:"center"}} >
             
-             <div className='share-card-play-store-card' >
-                   
-                   <div >
-                     <span>Join the agricultural community</span>
+            <div className='share-card-play-store-card' >
+                  
+                  <div >
+                    <span>Join the agricultural community</span>
 
-                   </div>
-                   <div>
-                   <a href="https://play.google.com/store/apps/details?id=net.gramoday.agriculture">
-                    Download Gramodaya
-                   </a>
+                  </div>
+                  <div>
+                  <a href="https://play.google.com/store/apps/details?id=net.gramoday.agriculture">
+                   Download Gramodaya
+                  </a>
 
-                   </div>
+                  </div>
 
 
-             </div>
+            </div>
 
-        </div>
+       </div>
+        
 
      
 

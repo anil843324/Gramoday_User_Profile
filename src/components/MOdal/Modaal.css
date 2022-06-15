@@ -1,0 +1,83 @@
+.ceneter{
+    display: grid;
+    place-items: center;
+   
+}
+
+
+
+
+
+
+
+.prompt-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #01a39d;;
+    padding: 15px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 14%), 0 2px 2px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 20%);
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prompt-title h3 {
+    color: #fff;
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+.prompt-title button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+.prompt-message {
+    padding: 10px 15px;
+   
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #424242;
+    margin-top: 30px;
+}
+
+
+
+.prompt-buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.prompt-buttons button:first-child {
+    margin-right: 10px;
+}
+.prompt-buttons button {
+   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+    border: none;
+    margin-top: 5px;
+    width: 70px;
+    padding: 5px;
+    background-color: #01a39d;
+    cursor: pointer;
+}
