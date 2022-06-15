@@ -1,0 +1,131 @@
+.contact-details {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 2px;
+    gap: 2px;
+    /* width: 100%; */
+    /* font-family:; */
+    padding: 20px 10px;
+    width: 50%;
+    margin: auto;
+
+}
+
+.contact-details-diplay-pic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-details-diplay-pic img{
+    height: 90px;
+    width: 90px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.contact-details-info{
+    margin-left: 15px;
+}
+.contact-details-info, .contact-details-info-bio {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details-info-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+
+.contact-details-info-location {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+
+.contact-details-info-language {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+
+
+.contact-details-buttons{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+    gap: 10px;
+
+}
+
+
+.action-button-md {
+    height: 30px;
+    width: 90px;
+}
+.action-button {
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.action-button-md img {
+    height: 11px;
+    margin-right: 5px;
+}
+
+
+.action-button-md span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.share-profile {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.share-button-sm {
+    height: 20px;
+    width: 50px;
+}
+.share-button {
+    background: #01a39d;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.share-button-sm img {
+    height: 11px;
+    margin-right: 2px;
+}
+
+.share-button-sm span {
+    font-size: 10px;
+}
+.share-button span {
+    /* font-family: var(--roboto); */
+    font-weight: 700;
+    color: #fff;
+}
