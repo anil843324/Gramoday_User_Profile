@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import "../Business/Business.css"
+import Modaal from '../MOdal/Modaal'
 const Product = ({ele}) => {
+
+   const navigate= useNavigate() 
+
+    const [opened,setOpened]=useState(false)
+
   return (
     <div className='product'>
 
@@ -22,7 +29,11 @@ const Product = ({ele}) => {
 
           <button className='product-see-details'>
 
-            <img src="https://app.gramoday.net/static/media/seeDetailsDots.802d07fd.svg" alt="see details" />
+            <img src="https://app.gramoday.net/static/media/seeDetailsDots.802d07fd.svg" alt="see details"
+             
+              onClick={()=> {navigate('/productinfo')}}
+
+             />
 
           </button>
 
@@ -36,13 +47,17 @@ const Product = ({ele}) => {
                <span>Share</span>
              </button>
             {/*  second button */}
-              <button className='action-button action-button-md' type='button' style={{backgroundColor:"rgb(210,170,27)"}} >
+              <button className='action-button action-button-md' type='button' style={{backgroundColor:"rgb(210,170,27)"}}
+               onClick={()=> {setOpened(!opened)}}
+               >
               <img src="	https://app.gramoday.net/static/media/interested.59b385b4.svg" alt="Interseted" />
                   
                    <span style={{color:"rgb(255,255,265)"}}>Interested</span>
               </button>
 
         </div>
+
+        <Modaal opened={opened} setOpened={setOpened}  />
 
       </div>
   )
