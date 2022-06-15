@@ -29,42 +29,8 @@ const Business = () => {
      
     }, [ ])
 
-     console.log(products)
      
-    //   console.log("first arry")
-    //  let arr=[]
-     
-    //    if(products){
-
-    //     products.forEach((ele)=>{
-          
-    //        console.log(ele)
-    //        arr.push(ele.posts)
-
-
-    //     })
-       
-    //    }  
-    //    console.log(arr)
-
-    //     console.log(" second array")
-   
-    //     let arr2=[]
-
-    //     if(arr){
-
-    //       arr.forEach((ele)=>{
-            
-    //          console.log(ele[0])
-    //          arr2.push(ele[0])
   
-  
-    //       })
-         
-    //      }  
-    //      console.log(arr2)
-
-
 
   return (
     <div className='business'>

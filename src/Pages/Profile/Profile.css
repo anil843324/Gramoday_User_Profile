@@ -1,0 +1,53 @@
+
+.profile-choice {
+    width: 50%;
+    margin: auto;
+}
+.profile-choice-btn-active {
+    border-bottom: 5px solid #01a39d !important;
+}
+
+.profile-choice button {
+    width: 50%;
+    background-color: #fff;
+    border: none;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #424242;
+    letter-spacing: .75px;
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+
+
+.share-card-play-store-card {
+    display: inline-flex;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+.share-card-play-store-card div {
+    text-align: left;
+    color: #6202ee;
+    font-size: 14px;
+}
+
+.share-card-play-store-card a {
+    background: linear-gradient(180deg,#6202ee,rgba(98,2,238,.9) 21.35%,rgba(98,2,238,.8) 43.75%,rgba(98,2,238,.7) 64.58%,rgba(98,2,238,.6) 81.77%,rgba(98,2,238,.5) 97.4%);
+    border-radius: 200px;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 10px;
+    text-decoration: none;
+}
