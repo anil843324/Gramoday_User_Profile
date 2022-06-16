@@ -1,14 +1,50 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
+import { useNavigate ,useParams } from 'react-router-dom'
 import Modaal from '../../components/MOdal/Modaal'
+import axios from 'axios'
 import "./ProductInfo.css"
 const ProductInfo = () => {
 
    const[opened,setOpened]=useState(false)
+   const [productsId, setProductsId]=useState([])
+   const [singleData,setSingleData]=useState({})
+   const navigate= useNavigate() 
 
-  const navigate= useNavigate() 
+   const id=useParams()
 
+   const url='https://api.gramoday.net:8082/v1/user/bySlug?profileSlug=mmtradingco'
+    const   fetchData=()=>{
+          axios.get(url)
+          .then((response)=> {
+           setProductsId(response.data.products)
+             
+          })
+          .catch((error)=>console.error(`Error : ${error}`))
+    }
+      useEffect(() => {
+       fetchData()
+     
+   }, [ ])
+
+
+     useLayoutEffect(()=>{
+
+       productsId && setSingleData(productsId.filter((elee)=> elee.cmdtyID=== id.id))
+
+     },[ ])
+
+   
+    console.log(id.id)
+  
+     console.log(productsId)
+
+     console.log('single Data',singleData)
+     
+
+   
+    
   return (
+    
     <div className='report-container'>
 
 

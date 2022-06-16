@@ -8,12 +8,16 @@ const Product = ({ele}) => {
 
     const [opened,setOpened]=useState(false)
 
+     
+
   return (
     <div className='product'>
 
         <div className='product-info'>
 
           <div className='product-display'>
+
+             {/*  i unable to  display product imgage because not in url format in api */}
             <img src="https://gramoday-images-public.s3.ap-south-1.amazonaws.com/commodity/605d761693c86f0017bfddfa" alt="product-img" />
           </div>
 
@@ -31,7 +35,7 @@ const Product = ({ele}) => {
 
             <img src="https://app.gramoday.net/static/media/seeDetailsDots.802d07fd.svg" alt="see details"
              
-              onClick={()=> {navigate('/productinfo')}}
+              onClick={()=> {navigate(`/productinfo/${ele.cmdtyID}`)}}
 
              />
 

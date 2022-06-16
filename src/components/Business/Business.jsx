@@ -20,14 +20,14 @@ const Business = () => {
            .catch((error)=>console.error(`Error : ${error}`))
      }
 
-      
-
        useEffect(() => {
 
         fetchData()
        
      
     }, [ ])
+
+    
 
      
   
@@ -102,7 +102,7 @@ const Business = () => {
          {
               products && products.map((ele,index)=>(
 
-                <Product  ele={ele} key={index} />
+                <Product  ele={ele} key={index}  />
               )
           
               )
